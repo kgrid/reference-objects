@@ -1,0 +1,21 @@
+/varinput:
+  post:    
+    engine: 
+      name: org.kgrid.python-activator
+      package: python_io_v1_0
+      module: io
+      function: input_primative
+/listinput:
+  post:    
+    engine: 
+      name: org.kgrid.python-activator
+      package: python_io_v1_0
+      module: io
+      function: input_list
+/dictinput:
+  post:    
+    engine: 
+      name: org.kgrid.python-activator
+      package: python_io_v1_0
+      module: io
+      function: input_dict

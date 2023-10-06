@@ -1,0 +1,14 @@
+[
+    { 
+        "@id": "python/hello/world/v1.0",
+        "url": "python-hello-world-v1-0.zip"
+    },
+    { 
+        "@id": "python/simple/v1.0",
+        "url": "python-simple-v1-0.zip"
+    },
+    { 
+        "@id": "python/input/v1.0",
+        "url": "python-input-v1-0.zip"
+    }
+  ]
