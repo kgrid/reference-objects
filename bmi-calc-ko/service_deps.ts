@@ -1,0 +1,1 @@
+import { get_bmi_category, calculate_bmi} from "./knowledge/knowledge.ts";
