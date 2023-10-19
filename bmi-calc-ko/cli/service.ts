@@ -1,5 +1,5 @@
 import { Command } from "https://deno.land/x/cliffy@v1.0.0-rc.3/command/mod.ts";
-import { get_bmi_category,calculate_bmi } from "../service_deps";
+import { get_bmi_category,calculate_bmi } from "../service_deps.ts";
 
 interface Options {
     weight: number;

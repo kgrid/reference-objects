@@ -1,0 +1,28 @@
+{
+    "@id":"BMICalculator",
+    "hasService":[
+        {
+            "@id": "cli",
+            "@type":["cli","deno"],
+            "serviceSpec":"cli/help.txt",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : "cli"
+        },
+        {
+            "@id": "webService",
+            "@type":"API",
+            "serviceSpec":"web_service/service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : {
+                "@id": "web_service",
+                "@type":"org.kgrid.javascript-activator"
+            }
+
+        }
+    ],
+    "hasKnowledge":{
+        "@id":"bmiFunction",
+        "@type":"function",
+        "implementedBy" : "knowledge"
+    }
+}

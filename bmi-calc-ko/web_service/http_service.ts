@@ -1,4 +1,5 @@
 import { get_bmi_category,calculate_bmi } from "../service_deps";
+
 export function bmi_category(input:any):string{
     var example={
         weight:1.0,
