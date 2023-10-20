@@ -1,6 +1,6 @@
 {
     "@id":"BMICalculator",
-    "version":"1",
+    "version":"2",
     "hasService":[
         {
             "@id": "cli",
