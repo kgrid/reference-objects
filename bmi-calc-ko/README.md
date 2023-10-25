@@ -10,7 +10,11 @@ import { function } from "{module}";
 ```bash
 deno run ./cli/service.ts --help
 ```
+## Deno Activator
 
+## Stand alone web interface
+
+## Batch Application
 ## Test
 ```bash
 # unit tests

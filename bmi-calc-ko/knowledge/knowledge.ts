@@ -1,5 +1,5 @@
-export function calculate_bmi(height:number,weight:number,metric:boolean=true):number{
-    var scaling_factor:number = metric ? 1 : 703;
+export function calculate_bmi(height:number,weight:number,metric=true):number{
+    const scaling_factor:number = metric ? 1 : 703;
     return (weight / (height ** 2)) * scaling_factor;
 }
 

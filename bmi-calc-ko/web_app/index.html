@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>BMI Calculator:</p>
+
+<form>
+    <label for="Weight">Weight: </label>
+    <br>
+    <input type="text" name="Weight"  id=weight required>
+    <br>
+    <label for="Height">Height: </label>
+    <br>
+    <input type="text" name="Height" id=height required>
+    <br>
+    <label for="unit">Unit: </label>
+    <br>
+    <select id="unit">
+        <option value="Metric" >Metric</option>
+        <option value="Imperial">Imperial</option>
+    </select>
+</form>
+<input type="button" value="Calc" onclick="calculate()" id="btn" />
+<input class="display-box" type="text" id="result" disabled />
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

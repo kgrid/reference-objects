@@ -1,18 +1,16 @@
+Usage:   Knowledge object
+Version: 0.0.1           
 
-[1mUsage:[22m   [95mKnowledge object[39m
-[1mVersion:[22m [33m0.0.1[39m           
-
-[1mDescription:[22m
+Description:
 
   Calculates BMI information
 
-[1mOptions:[22m
+Options:
 
-  [94m-h[39m, [94m--help[39m     [31m[1m-[22m[39m Show this help.                            
-  [94m-V[39m, [94m--version[39m  [31m[1m-[22m[39m Show the version number for this program.  
+  -h, --help     - Show this help.                            
+  -V, --version  - Show the version number for this program.  
 
-[1mCommands:[22m
+Commands:
 
-  [94mbmi[39m       [31m[1m-[22m[39m Calculate BMI         
-  [94mcategory[39m  [31m[1m-[22m[39m Calculate BMI Category
-
+  bmi       - Calculate BMI         
+  category  - Calculate BMI Category
