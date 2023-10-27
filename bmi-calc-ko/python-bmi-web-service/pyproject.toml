@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "org-kgrid-python-activator"
+name = "python-bmi-web-service"
 version = "0.1.0"
 description = ""
 authors = ["anurag-bangera <97190957+anurag-bangera@users.noreply.github.com>"]

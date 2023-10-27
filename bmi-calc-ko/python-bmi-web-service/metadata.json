@@ -9,6 +9,6 @@
   "keywords" : [ "BMI", "calculator" ],
   "hasServiceSpecification" : "service.yaml",
   "hasDeploymentSpecification" : "deployment.yaml",
-  "hasPayload" : "src/bmi_calculator/bmi.py",
+  "hasPayload" : "src/python_bmi_web_service/bmi.py",
   "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

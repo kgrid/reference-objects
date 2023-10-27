@@ -1,0 +1,7 @@
+/hello:
+  post:    
+    engine: 
+      name: org.kgrid.python-activator
+      package: hello_world
+      module: src
+      function: endpoint

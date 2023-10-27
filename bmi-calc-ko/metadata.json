@@ -1,6 +1,6 @@
 {
     "@id":"BMICalculator",
-    "version":"2",
+    "kgrid":"2",
     "hasService":[
         {
             "@id": "cli",
@@ -10,13 +10,24 @@
             "implementedBy" : "cli"
         },
         {
-            "@id": "webService",
+            "@id": "org_kgrid_javascript_activator",
             "@type":"API",
-            "serviceSpec":"web_service/service.yaml",
+            "serviceSpec":"org_kgrid_javascript_activator/service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : {
                 "@id": "web_service",
                 "@type":"org.kgrid.javascript-activator"
+            }
+
+        },
+        {
+            "@id": "python_bmi_web_service",
+            "@type":"API",
+            "serviceSpec":"python_bmi_web_service/service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : {
+                "@id": "web_service",
+                "@type":"org.kgrid.python-activator"
             }
 
         }
