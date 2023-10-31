@@ -2,5 +2,5 @@
   post:    
     engine: 
       name: org.kgrid.javascript-activator
-      file: ./src/src.js
+      artifact: ./src/src.js
       function: func

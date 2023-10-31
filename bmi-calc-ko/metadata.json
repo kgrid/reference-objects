@@ -5,17 +5,17 @@
         {
             "@id": "cli",
             "@type":["cli","deno"],
-            "serviceSpec":"cli/help.txt",
+            "hasServiceSpecification":"cli/help.txt",
             "dependsOn":"bmiFunction",
             "implementedBy" : "cli"
         },
         {
             "@id": "org_kgrid_javascript_activator",
             "@type":"API",
-            "serviceSpec":"org_kgrid_javascript_activator/service.yaml",
+            "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : {
-                "@id": "web_service",
+                "@id": "org_kgrid_javascript_activator",
                 "@type":"org.kgrid.javascript-activator"
             }
 
@@ -23,10 +23,10 @@
         {
             "@id": "python_bmi_web_service",
             "@type":"API",
-            "serviceSpec":"python_bmi_web_service/service.yaml",
+            "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : {
-                "@id": "web_service",
+                "@id": "python-bmi-web-service",
                 "@type":"org.kgrid.python-activator"
             }
 

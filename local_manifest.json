@@ -1,0 +1,68 @@
+[
+  {
+    "@id": "BMICalculator",
+    "kgrid": "2",
+    "hasService": [
+      {
+        "@id": "cli",
+        "@type": [
+          "cli",
+          "deno"
+        ],
+        "hasServiceSpecification": "cli/help.txt",
+        "dependsOn": "bmiFunction",
+        "implementedBy": "cli"
+      },
+      {
+        "@id": "org_kgrid_javascript_activator",
+        "@type": "API",
+        "hasServiceSpecification": "service.yaml",
+        "dependsOn": "bmiFunction",
+        "implementedBy": {
+          "@id": "org_kgrid_javascript_activator",
+          "@type": "org.kgrid.javascript-activator"
+        }
+      },
+      {
+        "@id": "python_bmi_web_service",
+        "@type": "API",
+        "hasServiceSpecification": "python_bmi_web_service/service.yaml",
+        "dependsOn": "bmiFunction",
+        "implementedBy": {
+          "@id": "python-bmi-web-service",
+          "@type": "org.kgrid.python-activator"
+        }
+      }
+    ],
+    "hasKnowledge": {
+      "@id": "bmiFunction",
+      "@type": "function",
+      "implementedBy": "knowledge"
+    },
+    "status": "loaded",
+    "error": "",
+    "local_url": "bmi-calc-ko"
+  },
+  {
+    "@id": "/javascript/hello/world/v1.0",
+    "@type": "koio:KnowledgeObject",
+    "title": "Basic Knowledge Object",
+    "identifier": "ark:/javascript/hello/world/v1.0",
+    "version": "v1.0",
+    "description": "A sample knowledge object",
+    "contributors": "Kgrid Team",
+    "keywords": [
+      "Hello",
+      "World"
+    ],
+    "hasServiceSpecification": "service.yaml",
+    "hasDeploymentSpecification": "deployment.yaml",
+    "hasPayload": "src/default/src.py",
+    "@context": [
+      "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+    ],
+    "status": "loaded",
+    "error": "",
+    "local_url": "javascript-hello-world-v1-0"
+  }
+]
