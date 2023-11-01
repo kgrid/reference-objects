@@ -1,5 +1,5 @@
 import { assertEquals} from "https://deno.land/std@0.202.0/assert/mod.ts";
-import { calculate_bmi,get_bmi_category} from "./knowledge.ts";
+import { calculate_bmi,get_bmi_category} from "./bmi_calculator.ts";
 
 
 Deno.test("test bmi calculation", ()=>{
