@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "implementation_a"
+version = "0.1.0"
+description = ""
+authors = ["anurag-bangera <97190957+anurag-bangera@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

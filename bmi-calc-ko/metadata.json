@@ -14,10 +14,10 @@
             "@type":"API",
             "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
-            "implementedBy" : {
+            "implementedBy" : [{
                 "@id": "org_kgrid_javascript_activator",
                 "@type":"org.kgrid.javascript-activator"
-            }
+            }]
 
         },
         {
@@ -25,10 +25,10 @@
             "@type":"API",
             "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
-            "implementedBy" : {
+            "implementedBy" : [{
                 "@id": "python-bmi-web-service",
                 "@type":"org.kgrid.python-activator"
-            }
+            }]
 
         }
     ],

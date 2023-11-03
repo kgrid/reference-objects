@@ -1,0 +1,1 @@
+export { get_bmi_category, calculate_bmi} from "./knowledge/bmi_calculator.ts";

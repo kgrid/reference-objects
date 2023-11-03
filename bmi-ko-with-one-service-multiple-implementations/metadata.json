@@ -1,0 +1,30 @@
+{
+    "@id":"bmi-ko-with-one-service-multiple-implementations",
+    "kgrid":"2",
+    "hasService":[      
+        {
+            "@id": "bmi-calculator-service",
+            "@type":"API",
+            "hasServiceSpecification":"service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : [
+                {
+                    "@id": "bmi-calculator-service",
+                    "@type":"org.kgrid.python-activator",
+                    "hasDeploymentSpecification": "implementation_a/deployment.yaml"
+                },
+                {
+                    "@id": "bmi-calculator-service",
+                    "@type":"org.kgrid.javascript-activator",
+                    "hasDeploymentSpecification": "implementation_b/deployment.yaml"
+                }
+        ]
+
+        }
+    ],
+    "hasKnowledge":{
+        "@id":"knowledge",
+        "@type":"function",
+        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    }
+}
