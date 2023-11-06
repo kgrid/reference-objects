@@ -9,14 +9,14 @@
             "dependsOn":"bmiFunction",
             "implementedBy" : [
                 {
-                    "@id": "bmi-calculator-service",
+                    "@id": "implementation_a",
                     "@type":"org.kgrid.python-activator",
-                    "hasDeploymentSpecification": "implementation_a/deployment.yaml"
+                    "hasDeploymentSpecification": "deployment.yaml"
                 },
                 {
-                    "@id": "bmi-calculator-service",
+                    "@id": "implementation_b",
                     "@type":"org.kgrid.javascript-activator",
-                    "hasDeploymentSpecification": "implementation_b/deployment.yaml"
+                    "hasDeploymentSpecification": "deployment.yaml"
                 }
         ]
 

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-bmi-web-service"
+name = "python_bmi_web_service"
 version = "0.1.0"
 description = ""
 authors = ["anurag-bangera <97190957+anurag-bangera@users.noreply.github.com>"]
