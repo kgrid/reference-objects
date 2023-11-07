@@ -19,7 +19,20 @@
     </select>
 </form>
 <input type="button" value="Calc" onclick="calculate()" id="btn" />
-<input class="display-box" type="text" id="result" disabled />
-<script type="text/javascript" src="index.js"></script>
+<input class="display-box" type="text" id="result"  />
+<script type="text/javascript">
+function calculate(){
+    const weight= document.getElementById("weight").value;
+    const height= document.getElementById("height").value;
+    const metric= document.getElementById("unit").value==="Metric";
+    console.log(calculate_bmi(weight,height,metric));
+    document.getElementById("result").value = calculate_bmi(weight,height,metric);
+}
+function calculate_bmi(height,weight,metric=true){
+    const scaling_factor = metric ? 1 : 703;
+    return (weight / (height ** 2)) * scaling_factor;
+}
+
+</script>
 </body>
 </html>

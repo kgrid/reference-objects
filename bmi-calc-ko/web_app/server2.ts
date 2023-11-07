@@ -1,23 +1,26 @@
-const listener = Deno.listen({ port: 8000 });
-console.log(`Server is running on http://localhost:8000`);
+import { serve } from "https://deno.land/std/http/mod.ts";
+import { lookup } from "https://deno.land/x/media_types/mod.ts";
 
-for await (const conn of listener) {
-  handleNewConnection(conn);
-}
+const BASE_PATH = "./";
 
-async function handleNewConnection(conn: Deno.Conn) {
-  for await (const req of Deno.serveHttp(conn)) {
-    await handleRequest(req.request, req.respondWith);
+const reqHandler = async (req: Request) => {
+  const filePath = BASE_PATH + new URL(req.url).pathname;
+  let fileSize;
+  try {
+    fileSize = (await Deno.stat(filePath)).size;
+  } catch (e) {
+    if (e instanceof Deno.errors.NotFound) {
+      return new Response(null, { status: 404 });
+    }
+    return new Response(null, { status: 500 });
   }
-}
+  const body = (await Deno.open(filePath)).readable;
+  return new Response(body, {
+    headers: {
+      "content-length": fileSize.toString(),
+      "content-type": lookup(filePath) || "application/octet-stream",
+    },
+  });
+};
 
-async function handleRequest(req: Request, resp: any) {
-  if (req.method === "POST") {
-    let body = await req.json();
-    console.log(body);
-    resp(new Response(null));
-  } else {
-      console.log(req.method)
-    resp(new Response(null));
-  }
-}
+serve(reqHandler, { port: 8080 });

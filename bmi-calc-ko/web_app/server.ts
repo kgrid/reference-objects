@@ -6,7 +6,7 @@ const handler = async (request: Request): Promise<Response> => {
     if (request.method === "POST") {
        const obj=await request.json();
     const body = `Your bmi is:\n\n${
-        calculate_bmi(obj.weight,obj.height,request.headers.get("unit")==="metric") ?? "Invalid Input"
+        calculate_bmi(obj.height,obj.weight,obj.unit==="metric").toFixed(2) ?? "Invalid Input"
     }`;
 
     return new Response(body, { status: 200 });
