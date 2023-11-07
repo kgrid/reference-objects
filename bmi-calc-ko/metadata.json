@@ -5,7 +5,7 @@
         {
             "@id": "cli",
             "@type":["cli","deno"],
-            "serviceSpec":"cli/help.txt",
+            "hasServiceSpecification":"cli/help.txt",
             "dependsOn":"bmiFunction",
             "implementedBy" : "cli"
         },
@@ -19,29 +19,29 @@
         {
             "@id": "org_kgrid_javascript_activator",
             "@type":"API",
-            "serviceSpec":"org_kgrid_javascript_activator/service.yaml",
+            "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
-            "implementedBy" : {
-                "@id": "web_service",
+            "implementedBy" : [{
+                "@id": ".",
                 "@type":"org.kgrid.javascript-activator"
-            }
+            }]
 
         },
         {
-            "@id": "python_bmi_web_service",
+            "@id": "python-bmi-web-service",
             "@type":"API",
-            "serviceSpec":"python_bmi_web_service/service.yaml",
+            "hasServiceSpecification":"service.yaml",
             "dependsOn":"bmiFunction",
-            "implementedBy" : {
-                "@id": "web_service",
+            "implementedBy" : [{
+                "@id": "python_bmi_web_service",
                 "@type":"org.kgrid.python-activator"
-            }
+            }]
 
         }
     ],
     "hasKnowledge":{
-        "@id":"bmiFunction",
+        "@id":"knowledge",
         "@type":"function",
-        "implementedBy" : "knowledge"
+        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
     }
 }

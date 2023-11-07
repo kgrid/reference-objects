@@ -2,7 +2,7 @@
   post:    
     engine: 
       name: org.kgrid.python-activator
-      package: bmi_calculator
+      package: python_bmi_web_service
       module: bmi
       function: calculate_bmi
     
@@ -11,7 +11,7 @@
   post:    
     engine: 
       name: org.kgrid.python-activator
-      package: bmi_calculator
+      package: python_bmi_web_service
       module: bmi
       function: get_bmi_category
 

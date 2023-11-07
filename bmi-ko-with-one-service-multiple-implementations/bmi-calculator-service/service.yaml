@@ -12,16 +12,16 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /endpoints/BMICalculator
+  - url: /endpoints/bmi-ko-with-one-service-multiple-implementations
     description: Calculate bmi
 tags:
   - name: KO Endpoints
     description: bmi calculation Endpoints    
 paths:
-  /bmi:
+  /bmi_category:
     post:
-      summary: Calculate bmi value.
-      description: Calculates bmi value.
+      summary: Calculate category value.
+      description: Calculates category value.
       requestBody:
         required: true
         content:
@@ -43,43 +43,7 @@ paths:
                   type: string
                   enum: [metric, imperial]
                   description: Unit system for weight and height ('metric' or 'imperial').
-                  example: metric
-      responses:
-        '200':
-          description: Successfully calculated bmi value.
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bmi:
-                    type: number
-                    format: float
-                    description: bmi.
-                    example: 19.0
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
-  /category:
-    post:
-      summary: Calculate category value.
-      description: Calculates category value.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:  
-                bmi:
-                  type: number
-                  format: float
-                  description: bmi of the person. 
-                  example: 20.0              
+                  example: metric          
       responses:
         '200':
           description: Successfully calculated bmi category.

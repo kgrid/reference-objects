@@ -1,0 +1,100 @@
+[
+  {
+    "@id":"BMICalculator",
+    "kgrid":"2",
+    "hasService":[
+        {
+            "@id": "cli",
+            "@type":["cli","deno"],
+            "hasServiceSpecification":"cli/help.txt",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : "cli"
+        },
+        {
+            "@id": "org_kgrid_javascript_activator",
+            "@type":"API",
+            "hasServiceSpecification":"service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : [{
+                "@id": ".",
+                "@type":"org.kgrid.javascript-activator"
+            }]
+
+        },
+        {
+            "@id": "python-bmi-web-service",
+            "@type":"API",
+            "hasServiceSpecification":"service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : [{
+                "@id": "python_bmi_web_service",
+                "@type":"org.kgrid.python-activator"
+            }]
+
+        }
+    ],
+    "hasKnowledge":{
+        "@id":"knowledge",
+        "@type":"function",
+        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    },
+    "status": "loaded",
+    "error": "",
+    "local_url": "bmi-calc-ko"
+  },
+  {
+    "@id":"bmi-ko-with-one-service-multiple-implementations",
+    "kgrid":"2",
+    "hasService":[      
+        {
+            "@id": "bmi-calculator-service",
+            "@type":"API",
+            "hasServiceSpecification":"service.yaml",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : [
+                {
+                    "@id": "implementation_a",
+                    "@type":"org.kgrid.python-activator",
+                    "hasDeploymentSpecification": "deployment.yaml"
+                },
+                {
+                    "@id": "implementation_b",
+                    "@type":"org.kgrid.javascript-activator",
+                    "hasDeploymentSpecification": "deployment.yaml"
+                }
+        ]
+
+        }
+    ],
+    "hasKnowledge":{
+        "@id":"knowledge",
+        "@type":"function",
+        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    },
+    "status": "loaded",
+    "error": "",
+    "local_url": "bmi-ko-with-one-service-multiple-implementations"
+},
+  {
+    "@id": "/javascript/hello/world/v1.0",
+    "@type": "koio:KnowledgeObject",
+    "title": "Basic Knowledge Object",
+    "identifier": "ark:/javascript/hello/world/v1.0",
+    "version": "v1.0",
+    "description": "A sample knowledge object",
+    "contributors": "Kgrid Team",
+    "keywords": [
+      "Hello",
+      "World"
+    ],
+    "hasServiceSpecification": "service.yaml",
+    "hasDeploymentSpecification": "deployment.yaml",
+    "hasPayload": "src/default/src.py",
+    "@context": [
+      "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+    ],
+    "status": "loaded",
+    "error": "",
+    "local_url": "javascript-hello-world-v1-0"
+  }
+]
