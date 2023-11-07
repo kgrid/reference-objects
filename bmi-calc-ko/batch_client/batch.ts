@@ -4,7 +4,7 @@ import { parse, stringify } from "https://deno.land/std@0.202.0/csv/mod.ts";
 import { readCSV,writeCSV } from "https://deno.land/x/csv/mod.ts";
 import { TableLayout } from "https://deno.land/x/cliffy@v1.0.0-rc.3/table/_layout.ts";
 
-async function batch_process(infile:string,outfile:string){
+export async function batch_process(infile:string,outfile:string){
     try{
         console.log("Started");
         const asd = await Deno.open(infile);
@@ -12,11 +12,13 @@ async function batch_process(infile:string,outfile:string){
         let output=[];
         for await (const row of readCSV(asd)) {
             let tout=[]
-            for await (const cell of row) {
+            for await(const cell of row) {
                 tout.push(cell);
             }
-            output.push([calculate_bmi(tout[0],tout[1],tout[2]==="metric")]);
+            output.push([calculate_bmi(tout[0],tout[1],tout[2].replace(/[^0-9a-z]/gi, '')=="Metric").toFixed(2)]);
+            
         }
+        asd.close();
         console.log("parsed input")
         const f = await Deno.open(outfile, {
         write: true,

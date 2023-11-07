@@ -10,6 +10,13 @@
             "implementedBy" : "cli"
         },
         {
+            "@id": "batch",
+            "@type":["batch","deno"],
+            "serviceSpec":"batch_client/help.txt",
+            "dependsOn":"bmiFunction",
+            "implementedBy" : "batch_client"
+        },
+        {
             "@id": "org_kgrid_javascript_activator",
             "@type":"API",
             "serviceSpec":"org_kgrid_javascript_activator/service.yaml",
