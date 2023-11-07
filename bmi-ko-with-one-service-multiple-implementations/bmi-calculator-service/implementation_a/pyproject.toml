@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "implementation_a"
+name = "package_name"
 version = "0.1.0"
 description = ""
 authors = ["anurag-bangera <97190957+anurag-bangera@users.noreply.github.com>"]

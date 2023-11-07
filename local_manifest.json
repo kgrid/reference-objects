@@ -4,30 +4,28 @@
     "kgrid":"2",
     "hasService":[
         {
-            "@id": "cli",
             "@type":["cli","deno"],
             "hasServiceSpecification":"cli/help.txt",
             "dependsOn":"bmiFunction",
             "implementedBy" : "cli"
         },
         {
-            "@id": "org_kgrid_javascript_activator",
             "@type":"API",
-            "hasServiceSpecification":"service.yaml",
+            "hasServiceSpecification":"org_kgrid_javascript_activator/service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : [{
-                "@id": ".",
+                "@id": "org_kgrid_javascript_activator",
                 "@type":"org.kgrid.javascript-activator"
-            }]
+            }       
+        ]
 
         },
         {
-            "@id": "python-bmi-web-service",
             "@type":"API",
-            "hasServiceSpecification":"service.yaml",
+            "hasServiceSpecification":"python-bmi-web-service/service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : [{
-                "@id": "python_bmi_web_service",
+                "@id": "python-bmi-web-service/implementation_a",
                 "@type":"org.kgrid.python-activator"
             }]
 
@@ -47,18 +45,17 @@
     "kgrid":"2",
     "hasService":[      
         {
-            "@id": "bmi-calculator-service",
             "@type":"API",
-            "hasServiceSpecification":"service.yaml",
+            "hasServiceSpecification":"bmi-calculator-service/service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : [
                 {
-                    "@id": "implementation_a",
+                    "@id": "bmi-calculator-service/implementation_a",
                     "@type":"org.kgrid.python-activator",
                     "hasDeploymentSpecification": "deployment.yaml"
                 },
                 {
-                    "@id": "implementation_b",
+                    "@id": "bmi-calculator-service/implementation_b",
                     "@type":"org.kgrid.javascript-activator",
                     "hasDeploymentSpecification": "deployment.yaml"
                 }
@@ -76,7 +73,7 @@
     "local_url": "bmi-ko-with-one-service-multiple-implementations"
 },
   {
-    "@id": "/javascript/hello/world/v1.0",
+    "@id": "javascript/hello/world/v1.0",
     "@type": "koio:KnowledgeObject",
     "title": "Basic Knowledge Object",
     "identifier": "ark:/javascript/hello/world/v1.0",

@@ -2,7 +2,7 @@
   post:    
     engine: 
       name: org.kgrid.python-activator
-      package: implementation_a
+      package: package_name
       module: module
       function: bmi_category
     

@@ -3,18 +3,17 @@
     "kgrid":"2",
     "hasService":[      
         {
-            "@id": "bmi-calculator-service",
             "@type":"API",
-            "hasServiceSpecification":"service.yaml",
+            "hasServiceSpecification":"bmi-calculator-service/service.yaml",
             "dependsOn":"bmiFunction",
             "implementedBy" : [
                 {
-                    "@id": "implementation_a",
+                    "@id": "bmi-calculator-service/implementation_a",
                     "@type":"org.kgrid.python-activator",
                     "hasDeploymentSpecification": "deployment.yaml"
                 },
                 {
-                    "@id": "implementation_b",
+                    "@id": "bmi-calculator-service/implementation_b",
                     "@type":"org.kgrid.javascript-activator",
                     "hasDeploymentSpecification": "deployment.yaml"
                 }
