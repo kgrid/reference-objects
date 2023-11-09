@@ -1,29 +1,36 @@
 {
+    "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
     "@id":"bmi-ko-with-one-service-multiple-implementations",
-    "kgrid":"2",
-    "hasService":[      
-        {
-            "@type":"API",
-            "hasServiceSpecification":"bmi-calculator-service/service.yaml",
-            "dependsOn":"bmiFunction",
-            "implementedBy" : [
-                {
-                    "@id": "bmi-calculator-service/implementation_a",
-                    "@type":"org.kgrid.python-activator",
-                    "hasDeploymentSpecification": "deployment.yaml"
-                },
-                {
-                    "@id": "bmi-calculator-service/implementation_b",
-                    "@type":"org.kgrid.javascript-activator",
-                    "hasDeploymentSpecification": "deployment.yaml"
-                }
+    "koio:kgrid":"2",
+    "@type" : "koio:KnowledgeObject",
+    "dc:title" : "bmi calculator with multiple impl",
+    "dc:identifier" : "ark:BMICalculatorMultiImp",
+    "version" : "v1.0",
+    "dc:description" : "calculates bmi value and category using multiple impl",
+    "koio:contributors" : "Kgrid Team",
+    "koio:keywords" : [ "bmi", "category", "calculate" ],
+    "koio:hasService":[      
+      {
+        "@type":"API",
+        "hasServiceSpecification":"bmi-calculator-service/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [
+          {
+            "@id": "bmi-calculator-service/implementation_a",
+            "@type":"koio:org.kgrid.python-activator"
+          },
+          {
+            "@id": "bmi-calculator-service/implementation_b",
+            "@type":"koio:org.kgrid.javascript-activator"
+          }
         ]
-
-        }
+  
+      }
     ],
-    "hasKnowledge":{
-        "@id":"knowledge",
-        "@type":"function",
-        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    "koio:hasKnowledge":{
+      "@id":"knowledge",
+      "@type":"function",
+      "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
     }
-}
+  }
+  

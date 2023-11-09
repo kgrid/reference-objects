@@ -1,44 +1,51 @@
 {
+    "@context":"https://kgrid.org/koio/contexts/ko.jsonld",  
     "@id":"BMICalculator",
-    "kgrid":"2",
-    "hasService":[
-        {
-            "@type":["cli","deno"],
-            "hasServiceSpecification":"cli/help.txt",
-            "dependsOn":"bmiFunction",
-            "implementedBy" : "cli"
-        },
-        {
-            "@id": "batch",
-            "@type":["batch","deno"],
-            "serviceSpec":"batch_client/help.txt",
-            "dependsOn":"bmiFunction",
-            "implementedBy" : "batch_client"
-        },
-        {
-            "@type":"API",
-            "hasServiceSpecification":"org_kgrid_javascript_activator/service.yaml",
-            "dependsOn":"bmiFunction",
-            "implementedBy" : [{
-                "@id": "org_kgrid_javascript_activator",
-                "@type":"org.kgrid.javascript-activator"
-            }]
-
-        },
-        {
-            "@type":"API",
-            "hasServiceSpecification":"python-bmi-web-service/service.yaml",
-            "dependsOn":"bmiFunction",
-            "implementedBy" : [{
-                "@id": "python-bmi-web-service/implementation_a",
-                "@type":"org.kgrid.python-activator"
-            }]
-
-        }
+    "koio:kgrid":"2",
+    "@type" : "koio:KnowledgeObject",
+    "dc:title" : "bmi calculator",
+    "dc:identifier" : "ark:BMICalculator",
+    "version" : "v1.0",
+    "dc:description" : "calculates bmi value and category",
+    "koio:contributors" : "Kgrid Team",
+    "koio:keywords" : [ "bmi", "category", "calculate" ],
+    "koio:hasService":[
+      {
+        "@type":["cli","javascript"],
+        "hasServiceSpecification":"cli/help.txt",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : "cli"
+      },
+      {
+        "@type":["batch","javascript"],
+        "hasServiceSpecification":"batch_client/help.txt",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : "batch_client"
+      },
+      {
+        "@type":"API",
+        "hasServiceSpecification":"API_service_js/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [{
+          "@id": "org_kgrid_javascript_activator",
+          "@type":"koio:org.kgrid.javascript-activator"
+        }]
+  
+      },
+      {
+        "@type":"API",
+        "hasServiceSpecification":"API_service_py/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [{
+          "@id": "API_service_py/implementation_a",
+          "@type":"koio:org.kgrid.python-activator"
+        }]
+  
+      }
     ],
-    "hasKnowledge":{
-        "@id":"knowledge",
-        "@type":"function",
-        "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    "koio:hasKnowledge":{
+      "@id":"knowledge",
+      "@type":"function",
+      "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
     }
-}
+  }
