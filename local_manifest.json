@@ -28,7 +28,7 @@
         "hasServiceSpecification":"API_service_js/service.yaml",
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
-          "@id": "org_kgrid_javascript_activator",
+          "@id": "API_service_js",
           "@type":"koio:org.kgrid.javascript-activator"
         }]
   
