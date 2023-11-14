@@ -1,0 +1,36 @@
+{
+    "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
+    "@id":"bmi-ko-1.2.1",
+    "koio:kgrid":"2",
+    "@type" : "koio:KnowledgeObject",
+    "dc:title" : "bmi calculator with 1 services, with two implementation, each in its own folder",
+    "dc:identifier" : "ark:BMICalculatorSingleServMultiImpFoldered",
+    "version" : "v1.0",
+    "dc:description" : "calculates bmi value and category using multiple impl",
+    "koio:contributors" : "Kgrid Team",
+    "koio:keywords" : [ "bmi", "category", "calculate" ],
+    "koio:hasService":[      
+      {
+        "@type":"API",
+        "hasServiceSpecification":"bmi-activator-service/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [
+          {
+            "@id": "bmi-activator-service/python",
+            "@type":"koio:org.kgrid.python-activator"
+          },
+          {
+            "@id": "bmi-activator-service/deno",
+            "@type":"koio:org.kgrid.javascript-activator"
+          }
+        ]
+  
+      }
+    ],
+    "koio:hasKnowledge":{
+      "@id":"knowledge",
+      "@type":"function",
+      "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
+    }
+  }
+  

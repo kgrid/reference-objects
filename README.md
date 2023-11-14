@@ -1,5 +1,9 @@
 # reference-objects
 These objects are Kgrid knowledge object made for the purpose of verifying new activator implementations and assisting the development of new KOs.
+
+#bmi-ko naming scheme
+bmi-ko.{Services}.{Implementations}.{Depth}
+Depth: Having an implentation in the base of the ko is 0. Having the implpementaiton in a folder is 1. Having the implemeentation within a folder within a service folder is 2. 
 ## Install the `reference-objects`
 The reference-objects repository stores a collectection of knoledge objects that can be run simultanesuously within any specification compliant activator. To install the repository, clone it into your collection path directory.
 

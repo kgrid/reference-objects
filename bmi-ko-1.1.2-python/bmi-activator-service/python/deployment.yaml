@@ -1,0 +1,10 @@
+/bmi_category:
+  post:    
+    engine: 
+      name: org.kgrid.python-activator
+      package: package_name
+      module: module
+      function: bmi_category
+    
+
+

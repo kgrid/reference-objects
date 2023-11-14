@@ -1,0 +1,13 @@
+Usage:   Knowledge object bmi --weight <weight> --height <height>
+Version: 0.0.1                                                   
+
+Description:
+
+  Calculate BMI
+
+Options:
+
+  -h, --help              - Show this help.                      
+  -w, --weight  <weight>  - Weight(lb/kg)              (required)
+  --height      <height>  - Height(in/m)               (required)
+  -m, --metric  [metric]  - Using metric system input            
