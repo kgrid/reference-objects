@@ -16,7 +16,7 @@
         "dependsOn":"bmiFunction",
         "implementedBy" : [
           {
-            "@id": "deno-activator",
+            "@id": ".",
             "@type":"koio:org.kgrid.javascript-activator"
           }
         ]
@@ -24,7 +24,7 @@
       }
     ],
     "koio:hasKnowledge":{
-      "@id":"knowledge",
+      "@id":"bmiFunction",
       "@type":"function",
       "implementedBy" : ["bmi_calculator.ts"]
     }

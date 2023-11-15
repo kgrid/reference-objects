@@ -28,7 +28,7 @@
       }
     ],
     "koio:hasKnowledge":{
-      "@id":"knowledge",
+      "@id":"bmiFunction",
       "@type":"function",
       "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
     }
