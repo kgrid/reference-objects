@@ -1,6 +1,6 @@
 {
   "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
-  "@id":"bmi-ko-1.1.2-javascript",
+  "@id":"bmi-ko-1.1.2-python",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
   "dc:title" : "bmi calculator with a deno activator service in an implementation folder in a service folder",
@@ -12,7 +12,7 @@
   "koio:hasService":[      
     {
       "@type":"API",
-      "hasServiceSpecification":"bmi-activator-service/python/service.yaml",
+      "hasServiceSpecification":"bmi-activator-service/service.yaml",
       "dependsOn":"bmiFunction",
       "implementedBy" : [
         {

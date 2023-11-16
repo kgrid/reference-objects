@@ -16,7 +16,7 @@
         "dependsOn":"bmiFunction",
         "implementedBy" : [
           {
-            "@id": "python-activator",
+            "@id": ".",
             "@type":"koio:org.kgrid.python-activator"
           }
         ]
