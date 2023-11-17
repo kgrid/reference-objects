@@ -242,7 +242,7 @@
     "koio:hasService": [
       {
         "@type": "API",
-        "hasServiceSpecification": "bmi-activator-servic/service.yaml",
+        "hasServiceSpecification": "bmi-activator-service/service.yaml",
         "dependsOn": "bmiFunction",
         "implementedBy": [
           {
@@ -602,10 +602,10 @@
     "local_url": "hello-world-ko"
   },
   {
-    "@id": "/javascript/hello/world/v1.0",
+    "@id": "javascript/hello/world/v1.0",
     "@type": "koio:KnowledgeObject",
     "title": "Basic Knowledge Object",
-    "identifier": "ark:/javascript/hello/world/v1.0",
+    "identifier": "ark:javascript/hello/world/v1.0",
     "version": "v1.0",
     "description": "A sample knowledge object",
     "contributors": "Kgrid Team",

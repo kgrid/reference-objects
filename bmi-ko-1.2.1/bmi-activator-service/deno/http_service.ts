@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-import { get_bmi_category,calculate_bmi } from "./bmi_calculator";
+import { get_bmi_category,calculate_bmi } from "./bmi_calculator.ts";
 
 export function bmi_category(input:any):string{
     const example={

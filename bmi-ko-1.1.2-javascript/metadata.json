@@ -12,7 +12,7 @@
     "koio:hasService":[      
       {
         "@type":"API",
-        "hasServiceSpecification":"bmi-activator-servic/service.yaml",
+        "hasServiceSpecification":"bmi-activator-service/service.yaml",
         "dependsOn":"bmiFunction",
         "implementedBy" : [
           {
