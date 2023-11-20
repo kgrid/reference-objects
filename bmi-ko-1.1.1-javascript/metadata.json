@@ -17,7 +17,10 @@
         "implementedBy" : [
           {
             "@id": "deno-activator",
-            "@type":"koio:org.kgrid.javascript-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
   

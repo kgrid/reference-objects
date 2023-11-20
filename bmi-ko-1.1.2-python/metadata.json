@@ -17,7 +17,10 @@
       "implementedBy" : [
         {
           "@id": "bmi-activator-service/python",
-          "@type":"koio:org.kgrid.python-activator"
+          "@type":[
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "python"            
+          ]
         }
       ]
 

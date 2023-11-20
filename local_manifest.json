@@ -40,7 +40,10 @@
         "implementedBy": [
           {
             "@id": "API_service_js",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       },
@@ -51,7 +54,10 @@
         "implementedBy": [
           {
             "@id": "API_service_py/implementation_a",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           }
         ]
       }
@@ -91,7 +97,10 @@
         "implementedBy": [
           {
             "@id": ".",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }
@@ -130,7 +139,10 @@
         "implementedBy": [
           {
             "@id": ".",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           }
         ]
       }
@@ -169,7 +181,10 @@
         "implementedBy": [
           {
             "@id": "deno-activator",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }
@@ -208,7 +223,10 @@
         "implementedBy": [
           {
             "@id": "python-activator",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           }
         ]
       }
@@ -247,7 +265,10 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service/deno",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }
@@ -286,7 +307,10 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service/python",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           }
         ]
       }
@@ -325,11 +349,17 @@
         "implementedBy": [
           {
             "@id": "python-activator",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "deno-activator",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }
@@ -369,11 +399,17 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service/python",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "bmi-activator-service/deno",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }
@@ -413,7 +449,10 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       },
@@ -464,7 +503,10 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service/deno",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       },
@@ -515,11 +557,17 @@
         "implementedBy": [
           {
             "@id": "bmi-activator-service/python",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "bmi-activator-service/deno",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       },
@@ -574,11 +622,17 @@
         "implementedBy": [
           {
             "@id": "bmi-calculator-service/implementation_a",
-            "@type": "koio:org.kgrid.python-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "bmi-calculator-service/implementation_b",
-            "@type": "koio:org.kgrid.javascript-activator"
+            "@type": [
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
       }

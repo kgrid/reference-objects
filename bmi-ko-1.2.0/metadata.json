@@ -17,11 +17,17 @@
         "implementedBy" : [
           {
             "@id": "python-activator",
-            "@type":"koio:org.kgrid.python-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "deno-activator",
-            "@type":"koio:org.kgrid.javascript-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
   

@@ -17,7 +17,10 @@
         "implementedBy" : [
           {
             "@id": "bmi-activator-service/deno",
-            "@type":"koio:org.kgrid.javascript-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
   

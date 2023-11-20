@@ -17,11 +17,17 @@
         "implementedBy" : [
           {
             "@id": "bmi-calculator-service/implementation_a",
-            "@type":"koio:org.kgrid.python-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "python"            
+            ]
           },
           {
             "@id": "bmi-calculator-service/implementation_b",
-            "@type":"koio:org.kgrid.javascript-activator"
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
           }
         ]
   

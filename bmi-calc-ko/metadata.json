@@ -28,7 +28,10 @@
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
           "@id": "API_service_js",
-          "@type":"koio:org.kgrid.javascript-activator"
+          "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
         }]
   
       },
@@ -38,7 +41,10 @@
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
           "@id": "API_service_py/implementation_a",
-          "@type":"koio:org.kgrid.python-activator"
+          "@type": [
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "python"            
+          ]
         }]
   
       }
