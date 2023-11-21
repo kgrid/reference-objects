@@ -1,0 +1,49 @@
+{
+    "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
+    "@id":"bmi-ko-seperate",
+    "koio:kgrid":"2",
+    "@type" : "koio:KnowledgeObject",
+    "dc:title" : "bmi calculator with the knowledge local to each service",
+    "dc:identifier" : "ark:BMICalculatorSeperate",
+    "version" : "v1.0",
+    "dc:description" : "calculates bmi value and category using multiple impl",
+    "koio:contributors" : "Kgrid Team",
+    "koio:keywords" : [ "bmi", "category", "calculate" ],
+    "koio:hasService":[      
+      {
+        "@type":"API",
+        "hasServiceSpecification":"combined-service/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [
+          {
+            "@id": "combined-service",
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
+          }
+        ]
+  
+      },
+      {
+        "@type":"API",
+        "hasServiceSpecification":"multi-end-service/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [
+          {
+            "@id": "mutli-end-service",
+            "@type":[
+              "https://kgrid.org/specs/activationSpec.html#object",
+              "javascript"            
+            ]
+          }
+        ]
+      }
+    ],
+    "koio:hasKnowledge":{
+      "@id":"bmiFunction",
+      "@type":"function",
+      "implementedBy" : ["bmi_calculator.ts"]
+    }
+  }
+  

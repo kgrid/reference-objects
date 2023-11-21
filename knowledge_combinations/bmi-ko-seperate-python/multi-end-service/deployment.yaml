@@ -1,0 +1,15 @@
+/bmi:
+  post:
+    engine:
+      name: org.kgrid.python-activator
+      package: multi-end-service-package
+      module: module
+      function: bmi
+/category:
+  post:
+    engine:
+      name: org.kgrid.python-activator
+      package: multi-end-service-package
+      module: module
+      function: category
+      
