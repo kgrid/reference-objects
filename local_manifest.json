@@ -1,6 +1,22 @@
 [
- {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+  {
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "BMICalculator",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -42,7 +58,7 @@
             "@id": "API_service_js",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -56,7 +72,7 @@
             "@id": "API_service_py/implementation_a",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           }
         ]
@@ -75,7 +91,23 @@
     "local_url": "bmi-calc-ko"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.0-javascript",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -99,7 +131,7 @@
             "@id": ".",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -117,7 +149,23 @@
     "local_url": "bmi-ko-1.1.0-javascript"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.0-python",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -141,7 +189,7 @@
             "@id": ".",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           }
         ]
@@ -159,7 +207,23 @@
     "local_url": "bmi-ko-1.1.0-python"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.1-javascript",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -183,7 +247,7 @@
             "@id": "deno-activator",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -201,7 +265,23 @@
     "local_url": "bmi-ko-1.1.1-javascript"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.1-python",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -225,7 +305,7 @@
             "@id": "python-activator",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           }
         ]
@@ -243,7 +323,23 @@
     "local_url": "bmi-ko-1.1.1-python"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.2-javascript",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -267,7 +363,7 @@
             "@id": "bmi-activator-service/deno",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -285,7 +381,23 @@
     "local_url": "bmi-ko-1.1.2-javascript"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.1.2-python",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -302,14 +414,14 @@
     "koio:hasService": [
       {
         "@type": "API",
-        "hasServiceSpecification": "bmi-activator-service/python/service.yaml",
+        "hasServiceSpecification": "bmi-activator-service/service.yaml",
         "dependsOn": "bmiFunction",
         "implementedBy": [
           {
             "@id": "bmi-activator-service/python",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           }
         ]
@@ -327,7 +439,23 @@
     "local_url": "bmi-ko-1.1.2-python"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.2.0",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -351,14 +479,14 @@
             "@id": "python-activator",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           },
           {
             "@id": "deno-activator",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -377,7 +505,23 @@
     "local_url": "bmi-ko-1.2.0"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-1.2.1",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -401,14 +545,14 @@
             "@id": "bmi-activator-service/python",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           },
           {
             "@id": "bmi-activator-service/deno",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -427,7 +571,23 @@
     "local_url": "bmi-ko-1.2.1"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-2.1.1",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -451,7 +611,7 @@
             "@id": "bmi-activator-service",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -481,7 +641,23 @@
     "local_url": "bmi-ko-2.1.1"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-2.1.2",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -505,7 +681,7 @@
             "@id": "bmi-activator-service/deno",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -535,7 +711,23 @@
     "local_url": "bmi-ko-2.1.2"
   },
   {
-    "@context": "https://kgrid.org/koio/contexts/ko.jsonld",
+    "@context": {
+      "dc": "http://purl.org/dc/elements/1.1/",
+      "koio": "http://kgrid.org/koio#",
+      "swo": "http://www.ebi.ac.uk/swo/",
+      "implementedBy": "swo:SWO_0000085",
+      "API": "swo:interface/SWO_9000054",
+      "cli": "swo:interface/SWO_9000053",
+      "python": "swo:SWO_0000118",
+      "javascript": "swo:SWO_0000108",
+      "dependsOn": "http://purl.obolibrary.org/obo/RO_0002502",
+      "batch": "https://spec.pistoiaalliance.org/idmp/ontology/ISO/ISO11615-MedicinalProducts/Batch",
+      "function": "http://purl.obolibrary.org/obo/BFO_0000034",
+      "hasServiceSpecification": {
+        "@id": "koio:hasServiceSpcification",
+        "@type": "@id"
+      }
+    },
     "@id": "bmi-ko-2.2.2",
     "koio:kgrid": "2",
     "@type": "koio:KnowledgeObject",
@@ -559,14 +751,14 @@
             "@id": "bmi-activator-service/python",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           },
           {
             "@id": "bmi-activator-service/deno",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -624,14 +816,14 @@
             "@id": "bmi-calculator-service/implementation_a",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "python"            
+              "python"
             ]
           },
           {
             "@id": "bmi-calculator-service/implementation_b",
             "@type": [
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "javascript"
             ]
           }
         ]
@@ -648,33 +840,5 @@
     "status": "loaded",
     "error": "",
     "local_url": "bmi-ko-with-one-service-multiple-implementations"
-  },
-  {
-    "status": "uninitialized",
-    "error": "FileNotFoundError(2, 'No such file or directory')",
-    "@id": "hello-world-ko",
-    "local_url": "hello-world-ko"
-  },
-  {
-    "@id": "javascript/hello/world/v1.0",
-    "@type": "koio:KnowledgeObject",
-    "title": "Basic Knowledge Object",
-    "identifier": "ark:javascript/hello/world/v1.0",
-    "version": "v1.0",
-    "description": "A sample knowledge object",
-    "contributors": "Kgrid Team",
-    "keywords": [
-      "Hello",
-      "World"
-    ],
-    "hasServiceSpecification": "service.yaml",
-    "hasDeploymentSpecification": "deployment.yaml",
-    "hasPayload": "src/default/src.py",
-    "@context": [
-      "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
-    ],
-    "status": "loaded",
-    "error": "",
-    "local_url": "javascript-hello-world-v1-0"
   }
 ]
