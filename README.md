@@ -219,7 +219,7 @@ or
     ```
 
 
-### bmi-ko-1.2.0
+### bmi-ko-1.2.1
 This KO contain one service that has two implementations (of the same service). The implementations are placed in separate implementation folders in the root of KO. 
 
 KO is structured as
@@ -265,7 +265,7 @@ Service section of the metadata is structured as follows.  "hasServiceSpecificat
     ]
     ```
 
-### bmi-ko-1.2.1
+### bmi-ko-1.2.2
 This KO contain one service that has two implementations (of the same service). The implementations are placed in separate implementation folders inside a service folder. 
 
 KO is structured as

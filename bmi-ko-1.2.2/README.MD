@@ -1,4 +1,4 @@
-# BMI-KO-1.2.1
+# BMI-KO-1.2.2
 
 This KO is able to calculate BMI functions. 
 
@@ -11,24 +11,25 @@ There are two functions inherent to this knowledge object: calculate_bmi and get
 This service has two different implementations, one in Python and another in Javascript. 
 
 ## Structure
-*(1 services).(2 implementations).(implementation depth=1)*
+*(1 services).(2 implementations).(implementation depth=2)*
 
-This KO contain one service that has two implementations (of the same service). The implementations are placed in separate implementation folders in the root of KO. 
+This KO contain one service that has two implementations (of the same service). The implementations are placed in separate implementation folders inside a service folder. 
 
 KO is structured as
 
 - KO folder
-    - Implementation 1 folder (deno)
+  - Service folder (bmi-activator-service)
+      - Implementation 1 folder (deno)
         - Implementation files and folders            
         - Deployment file      
-    - Implementation 2 folder (python)
+      - Implementation 2 folder (python)
         - Implementation files and folders            
         - Deployment file
-    - Service specification
-    - Metadata
+      - Service specification
+  - Metadata
 
-Service section of the metadata is structured as follows.  "hasServiceSpecification":"service.yaml" indicates that the service file is located at the root of KO and it is called service.yaml.
+Service section of the metadata is structured as follows. "hasServiceSpecification":"bmi-activator-service/service.yaml" indicates that the service file is located at ./bmi-activator-service/ and it is called service.yaml.
 
-"@id": "python-activator" indicates that the python implementation is located at ./python-activator/ and "@id": "deno-activator" indicates that the JavaScript implementation is located at ./deno-activator/.
+"@id": "bmi-activator-service/python" indicates that the python implementation is located at ./bmi-activator-service/python/ and "@id": "bmi-activator-service/deno" indicates that the JavaScript implementation is located at ./bmi-activator-service/deno/.
 
 Refer to the metadata file for additional specs on the organization of the KO 
