@@ -1,8 +1,0 @@
-1 single service + 1 implementation + implementation is located in the root of ko (*2 python and javascript)
-1 single service + 1 implementation + implementation is located in the service folder (*2 python and javascript)
-1 single service + 1 implementation + implementation is located in the service/implementatsion folder  (*2 python and javascript)
-1 single service + 2 implementation + impementation i slocated in implementation folders in root of ko
-1 single service + 2 implementation + impementation i slocated in service/implementation folders
-2 services + 1 implementation per service + implementation in root of service folder
-2 services + 1 implementation per service + implementation in service/implementation folder
-2 services + 2 implementations per service + implementations in service/implementation folders

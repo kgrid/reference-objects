@@ -36,12 +36,6 @@ Once activator is running with these KOs on the server you can
 - try out each activated KO's endpoints in openapi and swagger editor using the documentation link provided at /kos (if the KO has a service specification file)
 - access activated endpoints via an http Post requests to /endpoints/{ko id}/{endpoint id} with a json body to run the function behind the endpoint.
 
-## Use CLI services
-
-## Use KOs with stand-alone web service
-
-## Other native ways of using KOs
-
 ## Knowledge objects structural details
 The following Knowledge Objects (KOs) showcase diverse structures, to demonstrate the flexibility of activators. Implementation of services may be placed in the root of Knowledge Objects (KOs) or organized within service folders, each of which may further contain implementation folders. This allows for a spectrum of complexity, from simplest KO, when there is only one service and one implementation, to more complicated cases with multiple services and potentially multiple implementations of the same service.
 

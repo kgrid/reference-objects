@@ -63,6 +63,19 @@
           ]
         }]
   
+      },
+      {
+        "@type":"API",
+        "hasServiceSpecification":"web_app/service.yaml",
+        "dependsOn":"bmiFunction",
+        "implementedBy" : [{
+          "@id": "web_app",
+          "@type": [
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "deno"            
+          ]
+        }]
+  
       }
     ],
     "koio:hasKnowledge":{
