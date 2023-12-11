@@ -28,10 +28,10 @@ KO is structured as
         - Deployment file
       - Service specification
   - Service 2 folder (bmi-cli-service)
-      - Implementation 1 folder (basic-cli)
+      - Implementation 1 folder (deno-cli)
         - Implementation files and folders            
         - Deployment file
-      - Implementation 2 folder (batch-cli)
+      - Implementation 2 folder (python-cli)
         - Implementation files and folders            
         - Deployment file
       - Service specification

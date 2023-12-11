@@ -15,7 +15,7 @@ export async function batch_process(infile:string,outfile:string){
             for await(const cell of row) {
                 tout.push(cell);
             }
-            output.push([calculate_bmi(tout[0],tout[1],tout[2].replace(/[^0-9a-z]/gi, '')=="Metric").toFixed(2)]);
+            output.push([calculate_bmi(parseFloat(tout[0]),parseFloat(tout[1]),tout[2].replace(/[^0-9a-z]/gi, '')=="Metric").toFixed(2).toString()]);
             
         }
         asd.close();

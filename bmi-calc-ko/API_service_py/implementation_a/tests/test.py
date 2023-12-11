@@ -12,9 +12,6 @@ def test_calculate_bmi_works():
     test=calculate_bmi(input)
     assert test==19.32133800265668
     
-    
-    
-    
 def test_get_bmi_category_works():
     input= {
         "bmi":19.3

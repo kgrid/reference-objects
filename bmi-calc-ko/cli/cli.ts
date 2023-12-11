@@ -19,7 +19,7 @@ await new Command()
   .option("-w --weight <weight:number>","Weight(lb/kg)",{required: true})
   .option("--height <height:number>","Height(in/m)",{required: true})
   .option("-m --metric [metric:boolean]","Using metric system input",{required: false})
-  .action((options:BMIOptions) => console.log(calculate_bmi(options.weight,options.height,options.metric)))
+  .action((options:BMIOptions) => console.log(calculate_bmi(options.height,options.weight,options.metric)))
 
   .command("category", "Calculate BMI Category")
   .option("-b --bmi <bmi:number>","BMI",{required: true})

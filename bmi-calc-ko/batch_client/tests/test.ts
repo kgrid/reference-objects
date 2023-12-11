@@ -3,8 +3,8 @@ import { batch_process} from "../batch.ts";
 import { readCSV,writeCSV } from "https://deno.land/x/csv/mod.ts";
 //import { readCSV } from "https://deno.land/x/csv/mod.ts";
 Deno.test("test bmi calculation", async ()=>{
-    await batch_process("./batch_client/tests/test.csv","./batch_client/tests/out.csv")
-   const asd = await Deno.open("./batch_client/tests/out.csv");
+    await batch_process("./tests/test.csv","./tests/out.csv")
+   const asd = await Deno.open("./tests/out.csv");
     console.log("Opened file")
     const list=[19.83,29.22,43.04,31.11,22.80,17.16];
     let i=0;
@@ -16,5 +16,5 @@ Deno.test("test bmi calculation", async ()=>{
         i++;
     }
     asd.close()
-    Deno.removeSync("./batch_client/tests/out.csv");
+    Deno.removeSync("./tests/out.csv");
 });

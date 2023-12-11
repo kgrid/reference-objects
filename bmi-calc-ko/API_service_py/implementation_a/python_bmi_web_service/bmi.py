@@ -4,7 +4,6 @@ def calculate_bmi(input):
     scaling_factor = 703 if input['unit_system'] == "imperial" else 1
     return (input['weight'] / (input['height'] ** 2)) * scaling_factor
 
-
 def get_bmi_category(input):
     bmi=input['bmi']
     if bmi < 18.5:

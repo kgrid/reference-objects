@@ -37,8 +37,12 @@ Once activator is running with these KOs on the server you can
 - access activated endpoints via an http Post requests to /endpoints/{ko id}/{endpoint id} with a json body to run the function behind the endpoint.
 
 ## Use CLI services
-
+There are a variety of knowledge object within this repository which contain command line interfaces that implement the underlying knowledge. These services are mostly denoted by the 'cli' service name but also can be found as a 'batch_service'.  In general, these services can be launch by typing the appropiate interpretor(deno run or python3) and the target file. Each implementations of these services could have a unique way of activation, so please refer to the service's readme and help menu for addition information. Here is an example for bmi-calc-ko/cli:
+```
+deno run cli.ts --help
+```
 ## Use KOs with stand-alone web service
+Some knowledge objects also contain services which are web services that can be launched independently of an activator. We can find an example of this type of service in bmi-calc-ko/web_service. These services can be configured very unqiuely, so please refer to the specific services for more details. 
 
 ## Other native ways of using KOs
   - using python command (with pip install . or poetry install)

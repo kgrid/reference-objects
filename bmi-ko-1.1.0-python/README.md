@@ -5,6 +5,13 @@ This KO is able to calculate BMI functions. It contains service intended to be u
 ## Underlying Knowledge
 There are two functions inherent to this knowledge object: calculate_bmi and get_bmi_category. These functions implement the underlying knowledge used to calculate bmi values and to categorize weight classes based on bmi respectively.
 
+## Usage
+This package is intended to be used within the [KGrid Python Activator](https://github.com/kgrid/python-activator). Please refer to it's documentation to navigate deploying and usage this object within the activator. 
+
+### Run Tests
+This module includes tests that verify both the underlying knowledge implementation and the activator service. Run this command from within the tests folder.
+```pytest test.py```
+
 ## Structure
 *(one service).(one implementation).(depth=0)*
 
