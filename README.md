@@ -36,6 +36,9 @@ Once activator is running with these KOs on the server you can
 - try out each activated KO's endpoints in openapi and swagger editor using the documentation link provided at /kos (if the KO has a service specification file)
 - access activated endpoints via an http Post requests to /endpoints/{ko id}/{endpoint id} with a json body to run the function behind the endpoint.
 
+## Service Testing
+Most knowledge object services have associated test files. Most of these files follow a common pattern, being indicated by test_{specific}.{file}. Most of these files are either deno (written in typescript) or python files and can be run by ```deno test {test_file}``` or ```pytest {test_file}``` respectively. For additional information specific to a service, refer to the relavant KO readme file.
+
 ## Use CLI services
 There are a variety of knowledge object within this repository which contain command line interfaces that implement the underlying knowledge. These services are mostly denoted by the 'cli' service name but also can be found as a 'batch_service'.  In general, these services can be launch by typing the appropiate interpretor(deno run or python3) and the target file. Each implementations of these services could have a unique way of activation, so please refer to the service's readme and help menu for addition information. Here is an example for bmi-calc-ko/cli:
 ```

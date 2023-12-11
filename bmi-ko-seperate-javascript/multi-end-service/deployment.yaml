@@ -1,0 +1,13 @@
+/bmi:
+  post:
+    engine:
+      name: org.kgrid.javascript-activator
+      artifact: http_service.ts
+      function: bmi
+/category:
+  post:
+    engine:
+      name: org.kgrid.javascript-activator
+      artifact: http_service.ts
+      function: category
+      
