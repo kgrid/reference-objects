@@ -1,6 +1,6 @@
 {
     "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
-    "@id":"bmi-ko-1.1.0-python",
+    "@id":"bmi_ko_simple_python",
     "koio:kgrid":"2",
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "bmi calculator with a python activator service in the ko directory",

@@ -1,4 +1,4 @@
-def calculate_bmi(weight:float,height:float,unit_system:str="unit_system"):
+def calculate_bmi(height:float,weight:float,unit_system:str="unit_system"):
     scaling_factor = 703 if unit_system == "imperial" else 1
     return (weight / (height ** 2)) * scaling_factor
 

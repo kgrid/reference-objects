@@ -1,4 +1,4 @@
-from  ...knowledge.bmi_calculator import calculate_bmi,get_bmi_category
+from  bmi_ko_combined_python.knowledge.bmi_calculator import calculate_bmi,get_bmi_category
 import json
 
 def bmi(input:any):

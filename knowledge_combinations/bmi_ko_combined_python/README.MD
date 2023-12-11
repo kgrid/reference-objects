@@ -1,9 +1,9 @@
-# BMI-KO-SEPERATE-PYTHON
+# BMI-KO-COMBINED-PYTHON
 
-This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service within this object has its own seperate implementations of this knowledge.
+This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service within this object shares an implementation of this knowledge.
 
 ## Underlying Knowledge
-There are two functions inherent to this knowledge object: calculate_bmi and get_bmi_category. These functions implement the underlying knowledge used to calculate bmi values and to categorize weight classes based on bmi respectively. Each service has its own seperate implementations of this knowledge.
+There are two functions inherent to this knowledge object: calculate_bmi and get_bmi_category. These functions implement the underlying knowledge used to calculate bmi values and to categorize weight classes based on bmi respectively. Each service shares a implementation of this knowledge.
 
 ## Services Available
 - **multi-end-service** A service that allows the knowledge to be run using the [KGrid Python activator](https://github.com/kgrid/python-activator) as an API endpoint. This service exposes two endpoints, one for calculating bmi information from height and weight and another for calculating weight categorization information from bmi.
@@ -27,6 +27,8 @@ This module includes tests that verify both the underlying knowledge implementat
 ```
 pytest test.py
 ```
+## Implementation
+This object uses a complex structure to be able to share knowledge across different packages. Each layer of this object is set up as a python package, each containing a \_\_init\_\_.py file. From this, python is able to find the shared knowledge file outside of its current package by searching up the directory tree. It is unclear how such an implementation would behave during installation, and is in need of further expirimentation as this is used within the Python Activator. 
 
 ## Structure
 *(2 services).(1 implementations).(implementation depth=2)*
