@@ -1,12 +1,12 @@
-from  bmi_ko_combined_python.knowledge.bmi_calculator import calculate_bmi,get_bmi_category
+from  bmi_ko_combined_knowledge_python.knowledge.bmi_calculator import calculate_bmi,get_bmi_category
 import json
 
-def bmi(input:any):
+def bmi_category(input:any):
     validate_type(input)
-    return calculate_bmi(input["height"],input["weight"],input["unit_system"])
-def category(input:any):
-    validate_type(input)
-    return get_bmi_category(input["bmi"])
+    bmi=calculate_bmi(input["height"],input["weight"],input["unit_system"])
+    print(bmi)
+    return get_bmi_category(bmi)
+    
 def validate_type(input):
     try:
         # Parse the JSON input

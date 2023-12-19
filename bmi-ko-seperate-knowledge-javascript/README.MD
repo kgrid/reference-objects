@@ -1,4 +1,4 @@
-# BMI-KO-SEPERATE-JAVASCRIPT
+# BMI-KO-SEPERATE-KNOWLEDGE-JAVASCRIPT
 
 This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service within this object has its own seperate implementations of this knowledge.
 

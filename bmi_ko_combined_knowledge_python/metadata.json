@@ -16,7 +16,7 @@
         "@type": "@id"
       }
     }, 
-    "@id":"bmi-ko-seperate-python",
+    "@id":"bmi-ko-combined-knowledge-python",
     "koio:kgrid":"2",
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "bmi calculator with a python activator service in a folder",
@@ -60,7 +60,7 @@
     "koio:hasKnowledge":{
       "@id":"bmiFunction",
       "@type":"function",
-      "implementedBy" : ["bmi_calculator.py"]
+      "implementedBy" : ["knowledge/bmi_calculator.py"]
     }
   }
   

@@ -16,7 +16,7 @@
         "@type": "@id"
       }
     }, 
-    "@id":"bmi-ko-seperate-javascript",
+    "@id":"bmi-ko-combined-knowledge-javascript",
     "koio:kgrid":"2",
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "bmi calculator with the knowledge local to each service",
@@ -59,7 +59,7 @@
     "koio:hasKnowledge":{
       "@id":"bmiFunction",
       "@type":"function",
-      "implementedBy" : ["bmi_calculator.ts"]
+      "implementedBy" : ["knowledge/bmi_calculator.ts"]
     }
   }
   
