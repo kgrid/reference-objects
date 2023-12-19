@@ -1,11 +1,11 @@
-from  python_bmi_web_service.bmi import calculate_bmi,get_bmi_category
+from  python_bmi_web_service.bmi_knowledge import calculate_bmi_knowledge,get_bmi_category_knowledge
 import json
 
 def bmi_category(input:any):
     validate_type(input)
-    bmi=calculate_bmi(input)
+    bmi=calculate_bmi_knowledge(input)
     print(bmi)
-    return get_bmi_category({"bmi":bmi})
+    return get_bmi_category_knowledge({"bmi":bmi})
     
 def validate_type(input):
     try:

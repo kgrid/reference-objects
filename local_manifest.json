@@ -96,7 +96,7 @@
       "@id": "knowledge",
       "@type": "function",
       "implementedBy": [
-        "bmi_calculator.py",
+        "bmi_knowledge.py",
         "bmi_calculator.ts"
       ]
     },

@@ -2,7 +2,7 @@ import { assertEquals} from "https://deno.land/std@0.202.0/assert/mod.ts";
 import { batch_process} from "../batch.ts";
 import { readCSV,writeCSV } from "https://deno.land/x/csv/mod.ts";
 //import { readCSV } from "https://deno.land/x/csv/mod.ts";
-Deno.test("test bmi calculation", async ()=>{
+Deno.test("batch - test bmi calculation", async ()=>{
     await batch_process("./tests/test.csv","./tests/out.csv")
    const asd = await Deno.open("./tests/out.csv");
     console.log("Opened file")
