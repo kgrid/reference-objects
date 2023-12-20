@@ -27,10 +27,10 @@ Knowledge objects need to be activated by their corresponding activator. Current
     ORG_KGRID_JAVASCRIPT_ACTIVATOR_COLLECTION_PATH=/home/code/reference-objects deno run --allow-net --allow-env --allow-read --allow-write --allow-run --unstable -A  api.ts
     ```
 
-You can also try out our deployed [python](https://python-activator-06fae3ea8e83.herokuapp.com/docs) and [javascript](https://javascript-activator-3a6e3a45c6f0.herokuapp.com/doc) activators.
+You can also try out our deployed [python](https://python-activator-06fae3ea8e83.herokuapp.com/docs) and [javascript](https://javascript-activator-3a6e3a45c6f0.herokuapp.com/docs) activators.
 
 Once activator is running with these KOs on the server you can
-- access documentation and list of activator endpoints at /doc
+- access documentation and list of activator endpoints at /docs
 - access the list of KOs and check their activation status at /kos 
 - access the list of activated endpoints at /endpoints
 - try out each activated KO's endpoints in openapi and swagger editor using the documentation link provided at /kos (if the KO has a service specification file)
@@ -48,9 +48,75 @@ deno run cli.ts --help
 Some knowledge objects also contain services which are web services that can be launched independently of an activator. We can find an example of this type of service in bmi-calc-ko/web_service. These services can be configured very unqiuely, so please refer to the specific services for more details. 
 
 ## Other native ways of using KOs
-  - using python command (with pip install . or poetry install)
-  - using uvicorn api:app
-  - add test
+Other than using the services implemented in a KO, the knowledge and services embedded in a KO could be used in a native way. 
+
+### Installing the KO
+For a KO that has the knowledge and service implemented as a python package, the packag could be installed ( using "pip install or poetry install) in the workspace and then the knowledge and service could be used with python command. Here are the steps to install and use it from code:
+
+1. Navigate to the folder than contains the package.
+2. Install the package
+
+    ```bash
+    pip install .
+    ```
+
+    or
+
+    ```bash
+    poetry intall # for python packages created using poetry 
+    ``` 
+3. Run Python through command line
+    ```bash
+    python
+    # some distributions of linux use python3
+    ```
+
+4. Import the package and module and call the function. For example for the get_bmi_category function implemented in bmi module of python_bmi_web_service package in API_service_py service of [bmi-calc-ko](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko) (id: BMICalculator) KO use the following to test the knowledge: 
+    ```bash
+    >>> from  python_bmi_web_service.bmi_knowledge import calculate_bmi_knowledge,get_bmi_category_knowledge
+    >>> get_bmi_category_knowledge({"bmi":2})
+    'Normal weight'  # <- output
+    ```
+
+    and the following to test the service: 
+    ```bash
+    >>> from  python_bmi_web_service.bmi_service import calculate_bmi,get_bmi_category
+    >>> get_bmi_category({"bmi":2})
+    'Normal weight'  # <- output
+    ```
+### Add and run tests
+Tests are considered a native way of verification of correctness and also documentation and code examples. The could be added to each KO, using different programming techniques, to test KO's knowledge and its services.
+
+#### Python 
+For python KOs, we use [pytest](https://docs.pytest.org/en/7.1.x/contents.html). Examples of pytest are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_py/implementation_a/tests) to test the knowledge and service. To run the tests, if tests are added based on the pytest standards, you can simply follow the following simple steps:
+1. Navigate to the root of KO
+2. Run pytest command
+    ```
+    pytest
+    ```
+
+You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the test_{topic}.py files.
+
+#### JavaScript
+We implemented JavaScript KOs using Deno so, we use [testing in Deno](https://docs.deno.com/runtime/manual/basics/testing/) to test the knowledge and service. Examples of Deno tests are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_js/tests) to test the knowledge and service. To run the tests, if tests are added based on the Deno testing standards, you can simply follow the following simple steps:
+1. Navigate to the root of KO
+2. Run Deno test command and provide the required [Deno permissions](https://docs.deno.com/runtime/manual/basics/permissions) for your test
+    ```
+    deno test --allow-read --allow-write
+    ```
+
+You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the {topic}_test.ts files.
+
+### Add and run as a web service
+using uvicorn api:app
+
+
+## Inter-KO calling
+The Ko at /ko-interconn (id: ko-interconn) is an example for inter-KO calling. This KO does not implement the knowledge itself but it contains a service (python-service) with python implementation that uses inter-KO calling to execute the knowledge implemented in the KO at /bmi-calc-ko (id: BMICalculator). 
+
+When using this KO by itself the python_bmi_web_service of bmi-calc-ko KO ( id:BMICalculator) needs to be manually installed using 'pip install' in the workspace. Once it is installed, then the import command in the implementation of the service would work. You can run "pytest" in the implementation folder (/ko-interconn/python-service) to test if the service works. 
+
+When using this KO with the Python activator, the bmi-calc-ko KO ( id:BMICalculator) needs to be activated too, for this KO to work. The order in which KOs are listed on the manifest and installed is important. The KO which is dependant on another one must be installed later. When the Python activator installs KOs as part of the activation process, packages within the KOs will be installed automatically in the system's temp location. This enables inter-ko calling between KOs that are activated using the activator.
 
 ## Knowledge Service Table
 | KO          | Purpose      | Expirimental | Python Activator | Javascript Activator | Command Line Interface | Batch Processing Interface | Standalone Web Service | Shared Knowledge | KO 2.0 |
