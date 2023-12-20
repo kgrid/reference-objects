@@ -16,10 +16,10 @@
       "@type": "@id"
     }
   },  
-  "@id":"bmi-ko-1.1.0-javascript",
+  "@id":"bmi-ko-single-service-javascript-2",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
-  "dc:title" : "bmi calculator with a deno activator service in the ko directory",
+  "dc:title" : "bmi calculator with a deno activator service in a folder",
   "dc:identifier" : "ark:BMICalculatorSingleServSingleImp",
   "version" : "v1.0",
   "dc:description" : "calculates bmi value and category using multiple impl",
@@ -28,11 +28,11 @@
   "koio:hasService":[      
     {
       "@type":"API",
-      "hasServiceSpecification":"service.yaml",
+      "hasServiceSpecification":"deno-activator/service.yaml",
       "dependsOn":"bmiFunction",
       "implementedBy" : [
         {
-          "@id": ".",
+          "@id": "deno-activator",
           "@type":[
             "https://kgrid.org/specs/activationSpec.html#object",
             "javascript"            
@@ -48,4 +48,3 @@
     "implementedBy" : ["bmi_calculator.ts"]
   }
 }
-  

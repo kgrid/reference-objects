@@ -1,4 +1,4 @@
-# BMI-KO-1.1.2-javascript
+# BMI-KO-SINGLE-SERVICE-JAVASCRIPT-3
 
 This KO is able to calculate BMI functions. 
 

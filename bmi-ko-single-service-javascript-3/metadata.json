@@ -16,7 +16,7 @@
       "@type": "@id"
     }
   }, 
-  "@id":"bmi-ko-1.1.2-javascript",
+  "@id":"bmi-ko-single-service-javascript-3",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
   "dc:title" : "bmi calculator with a deno activator service in an implementation folder in a service folder",

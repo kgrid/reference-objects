@@ -1,4 +1,4 @@
-# BMI-KO-1.1.0-javascript
+# BMI-KO-SINGLE-SERVICE-JAVASCRIPT-1
 
 This KO is able to calculate BMI functions. It contains service intended to be used in within the [KGrid deno activator](https://github.com/kgrid/javascript-activator)
 
