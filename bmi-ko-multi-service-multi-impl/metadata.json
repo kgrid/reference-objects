@@ -16,7 +16,7 @@
       "@type": "@id"
     }
   }, 
-  "@id":"bmi-ko-2.2.2",
+  "@id":"bmi-ko-multi-service-multi-impl",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
   "dc:title" : "bmi calculator with 2 services,each with two implementations",

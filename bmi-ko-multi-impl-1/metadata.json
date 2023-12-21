@@ -16,11 +16,11 @@
       "@type": "@id"
     }
   }, 
-  "@id":"bmi-ko-2.1.1",
+  "@id":"bmi-ko-multi-impl-1",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
-  "dc:title" : "bmi calculator with 2 services,each with one implementation in the service directory",
-  "dc:identifier" : "ark:BMICalculatorMultiServSingleImp",
+  "dc:title" : "bmi calculator with 1 services, with two implementation, each in its own folder in the ko directory",
+  "dc:identifier" : "ark:BMICalculatorSingleServMultiImp",
   "version" : "v1.0",
   "dc:description" : "calculates bmi value and category using multiple impl",
   "koio:contributors" : "Kgrid Team",
@@ -28,27 +28,22 @@
   "koio:hasService":[      
     {
       "@type":"API",
-      "hasServiceSpecification":"bmi-activator-service/service.yaml",
+      "hasServiceSpecification":"service.yaml",
       "dependsOn":"bmiFunction",
       "implementedBy" : [
         {
-          "@id": "bmi-activator-service",
+          "@id": "python-activator",
+          "@type":[
+            "https://kgrid.org/specs/activationSpec.html#object",
+            "python"            
+          ]
+        },
+        {
+          "@id": "deno-activator",
           "@type":[
             "https://kgrid.org/specs/activationSpec.html#object",
             "javascript"            
           ]
-        }
-      ]
-
-    },
-    {
-      "@type":"cli",
-      "hasServiceSpecification":"bmi-cli-service/help.txt",
-      "dependsOn":"bmiFunction",
-      "implementedBy" : [
-        {
-          "@id": "bmi-cli-service",
-          "@type":"cli"
         }
       ]
 

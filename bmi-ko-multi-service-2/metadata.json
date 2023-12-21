@@ -16,11 +16,11 @@
       "@type": "@id"
     }
   }, 
-  "@id":"bmi-ko-1.2.2",
+  "@id":"bmi-ko-multi-service-2",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
-  "dc:title" : "bmi calculator with 1 services, with two implementation, each in its own folder",
-  "dc:identifier" : "ark:BMICalculatorSingleServMultiImpFoldered",
+  "dc:title" : "bmi calculator with 2 services,each with one implementations in its own folder",
+  "dc:identifier" : "ark:BMICalculatorMultiServSingleImpFoldered",
   "version" : "v1.0",
   "dc:description" : "calculates bmi value and category using multiple impl",
   "koio:contributors" : "Kgrid Team",
@@ -32,18 +32,23 @@
       "dependsOn":"bmiFunction",
       "implementedBy" : [
         {
-          "@id": "bmi-activator-service/python",
-          "@type":[
-            "https://kgrid.org/specs/activationSpec.html#object",
-            "python"            
-          ]
-        },
-        {
           "@id": "bmi-activator-service/deno",
           "@type":[
             "https://kgrid.org/specs/activationSpec.html#object",
             "javascript"            
           ]
+        }
+      ]
+
+    },
+    {
+      "@type":"cli",
+      "hasServiceSpecification":"bmi-cli-service/help.txt",
+      "dependsOn":"bmiFunction",
+      "implementedBy" : [
+        {
+          "@id": "bmi-cli-service/basic-cli",
+          "@type":"cli"
         }
       ]
 
@@ -55,3 +60,4 @@
     "implementedBy" : ["bmi_calculator.py","bmi_calculator.ts"]
   }
 }
+  

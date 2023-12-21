@@ -1,4 +1,4 @@
-# BMI-KO-2.1.2
+# BMI-KO-MULTI-SERVICE-2
 
 This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge.
 
