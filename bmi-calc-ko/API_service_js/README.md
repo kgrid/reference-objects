@@ -6,4 +6,4 @@ This package is intended to be used within the [KGrid Deno Activator](https://gi
 
 ### Run Tests
 This module includes tests that verify both the underlying knowledge implementation and the activator service.
-```deno test test_activator.ts```
+```deno test```

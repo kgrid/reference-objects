@@ -2,7 +2,7 @@
 This is an expirimental KO based off of a BMI calculator. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service contains a readme which describes its usage and also one or more implementations.
 
 ## Run tests
-Deno tests can be run using ```deno test {test_file}```. Python tests files can be run using ```pytest {test_file}```.
+Deno tests can be run using ```deno test --allow-read --allow-write```. Python tests files can be run using ```pytest```. These commands will automatically find and run all the relevant tests in the KO. The deno tests include those for the batch service, which require special permissions to read and write from test files to a tmp directory. 
 
 ## Underlying Knowledge
 There are two functions inherent to this knowledge object: calculate_bmi and get_bmi_category. These functions implement the underlying knowledge used to calculate bmi values and to categorize weight classes based on bmi respectively.

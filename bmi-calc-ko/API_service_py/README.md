@@ -5,5 +5,5 @@ This is a service that implements a BMI calculator and exposes it to a web inter
 This package is intended to be used within the [KGrid Python Activator](https://github.com/kgrid/python-activator). Please refer to it's documentation to navigate deploying and usage this object within the activator. 
 
 ### Run Tests
-This module includes tests that verify both the underlying knowledge implementation and the activator service. Run this command from within the tests folder.
-```pytest test.py```
+This module includes tests that verify both the underlying knowledge implementation and the activator service. 
+```pytest```
