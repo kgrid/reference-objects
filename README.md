@@ -48,9 +48,32 @@ deno run cli.ts --help
 Some knowledge objects also contain services which are web services that can be launched independently of an activator. We can find an example of this type of service in bmi-calc-ko/web_service. These services can be configured very unquely, so please refer to the specific services for more details. 
 
 ## Other native ways of using KOs
-Other than using the services implemented in a KO, the knowledge and services embedded in a KO could be used in a native way. 
+Other than using the services implemented in a KO, the knowledge and services embedded in a KO could be accessed and used in native ways. 
 
-### Programming Interactive Environment/Mode
+### Add and run tests
+Tests are considered a native way of verification of correctness and also documentation and code examples. They could be added to each KO, using different programming techniques, to test KO's knowledge and its services.
+
+#### Python 
+For Python KOs, we use [pytest](https://docs.pytest.org/en/7.1.x/contents.html). Examples of pytest are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_py/implementation_a/tests) to test the knowledge and service. To run the tests, if tests are added based on the pytest standards, you can simply follow the following simple steps:
+1. Navigate to the root of KO
+2. Run pytest command
+    ```
+    pytest
+    ```
+
+You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the test_{topic}.py files.
+
+#### JavaScript
+We implemented JavaScript KOs using Deno so, we use [testing in Deno](https://docs.deno.com/runtime/manual/basics/testing/) to test the knowledge and service. Examples of Deno tests are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_js/tests) to test the knowledge and service. To run the tests, if tests are added based on the Deno testing standards, you can simply follow the following simple steps:
+1. Navigate to the root of KO
+2. Run Deno test command and provide the required [Deno permissions](https://docs.deno.com/runtime/manual/basics/permissions) for your test
+    ```
+    deno test --allow-read --allow-write
+    ```
+
+You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the {topic}_test.ts files.
+
+### Import and use knowledge or service functions in programming interactive environment/mode
 Programming Interactive Environment/Mode is a command line shell which gives immediate feedback for each statement, while running previously fed statements in active memory. 
 In a programming interactive environment/mode you can import packages and modules and use their functions.
 
@@ -63,7 +86,6 @@ For a KO that has the knowledge and service implemented as a Python package, the
     ```bash
     pip install .
     ```
-
     or
 
     ```bash
@@ -88,6 +110,9 @@ For a KO that has the knowledge and service implemented as a Python package, the
     >>> get_bmi_category({"bmi":20})
     'Normal weight'  # <- output
     ```
+
+If you run Python interactive mode when the working directory is the same as the directory which contains the package, you can skip the package installation step.
+
 
 #### JavaScript
 For a KO that has the knowledge and service implemented using as TypeScript or JavaScript module using deno, the modules could be imported using Deno REPL which provides an interactive environment to explore the language/runtime without writing a program. Here are the steps to run the deno interactive environment and import modules that implement knowledge or service and use their functions:
@@ -114,32 +139,89 @@ For a KO that has the knowledge and service implemented using as TypeScript or J
     > get_bmi_category(17.2)
     "Underweight"       # <- output
     ```
-### Add and run tests
-Tests are considered a native way of verification of correctness and also documentation and code examples. They could be added to each KO, using different programming techniques, to test KO's knowledge and its services.
 
-#### Python 
-For Python KOs, we use [pytest](https://docs.pytest.org/en/7.1.x/contents.html). Examples of pytest are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_py/implementation_a/tests) to test the knowledge and service. To run the tests, if tests are added based on the pytest standards, you can simply follow the following simple steps:
-1. Navigate to the root of KO
-2. Run pytest command
-    ```
-    pytest
+### Import and run knowledge or service functions as web APIs in programming interactive environment/mode
+In a programming interactive environment/mode you can also create web APIs and host them on a local web server.
+
+#### Python
+This step by step example shows how you can import python implementation of the knowledge function from the KO at /bmi-calc-ko (id: BMICalculator), create a web API using FastAPI, host it in uvicorn as a local web server and then access and run it:
+
+1. Navigate to the folder that contains the package.
+2. Run Python interactive mode through command line 
+    ```bash
+    python
+    # some distributions of Linux use python3
     ```
 
-You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the test_{topic}.py files.
+3. Import the function form knowledge package and module  
+    ```bash
+    >>> from  python_bmi_web_service.bmi_knowledge import get_bmi_category_knowledge
+    ```
+4. Create a web API
+    ```
+    >>> from fastapi import Body, FastAPI
+    >>> app=FastAPI()
+    >>> @app.post("/")
+    ... async def execute_endpoint( data: dict = Body(...)):
+    ...     return get_bmi_category_knowledge(data)
+    ... 
+    ```
+5. Host the API in a local web server   
+
+    ```
+    >>> import uvicorn
+    >>> uvicorn.run(app, host="127.0.0.1", port=8000)
+    INFO:     Started server process [16074]
+    INFO:     Waiting for application startup.
+    INFO:     Application startup complete.
+    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+    ```
+6. To test the API now you can either send a POST request to http://127.0.0.1:8000 with a request body like {"bmi":20} or you can access http://127.0.0.1:8000/docs in your browser to use the FastAPI- Swagger UI. 
+  
 
 #### JavaScript
-We implemented JavaScript KOs using Deno so, we use [testing in Deno](https://docs.deno.com/runtime/manual/basics/testing/) to test the knowledge and service. Examples of Deno tests are added to the KO at [/bmi-calc-ko (id: BMICalculator)](https://github.com/kgrid/reference-objects/tree/main/bmi-calc-ko/API_service_js/tests) to test the knowledge and service. To run the tests, if tests are added based on the Deno testing standards, you can simply follow the following simple steps:
-1. Navigate to the root of KO
-2. Run Deno test command and provide the required [Deno permissions](https://docs.deno.com/runtime/manual/basics/permissions) for your test
+This step by step example shows how you can import JavaScript implementation of the service function from the KO at /bmi-calc-ko (id: BMICalculator), create a web API using deno's oak middleware, host it in a local web server and then access and run it:
+1. [Install deno](https://docs.deno.com/runtime/manual/getting_started/installation) in your workspace, if you have not doen it already.
+2. Navigate to the folder than contains the .ts or .js module.
+3. Run deno interactive mode through command line 
+    ```bash
+    deno repl
     ```
-    deno test --allow-read --allow-write
+4. Import the function form the module:
+    ```bash
+    > import {bmi_category} from  "./http_service.ts"
+    ```
+5. Create a web API.
+    ```
+    import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+
+    const app = new Application();
+    const router = new Router();
+
+    router.post("/", async (context) => {
+        const input = await context.request.body().value;
+        const result = bmi_category(input);
+        context.response.body = { result };
+    });
+    ```
+6. Host the API in a local web server   
+    ```
+    app.use(router.routes());
+    app.use(router.allowedMethods());
+    const port = 8000;
+    await app.listen({port});
     ```
 
-You will see the result of the tests. To see the detail on what those tests are or to add more tests, you should look at the content of the {topic}_test.ts files.
-
-### Add and run as a web service
-using uvicorn api:app
-
+7.  Now you can send a POST request to http://127.0.0.1:8000 with a request body like 
+    ```bash
+    {
+        "height":1.8,
+        "weight":56,
+        "unit_system":"metric"
+    }
+    ```
+ 
+  
 
 ## Inter-KO calling
 The Ko at /ko-interconn (id: ko-interconn) is an example for inter-KO calling. This KO does not implement the knowledge itself, but it contains a service (python-service) with Python implementation that uses inter-KO calling to execute the knowledge implemented in the KO at /bmi-calc-ko (id: BMICalculator). 
