@@ -1,6 +1,6 @@
 {
     "@context":"https://kgrid.org/koio/contexts/ko.jsonld", 
-    "@id":"bmi-ko-1.1.0-javascript",
+    "@id":"bmi-ko-simple-javascript",
     "koio:kgrid":"2",
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "bmi calculator with a deno activator service in the ko directory",

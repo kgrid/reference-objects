@@ -1,7 +1,7 @@
 import re
 import pytest
-from package_name.bmi_calculator import calculate_bmi,get_bmi_category
-from package_name.module import bmi_category
+from ..package_name.bmi_calculator import calculate_bmi,get_bmi_category
+from ..package_name.module import bmi_category
 
 def test_calculate_bmi_works():
     input= {

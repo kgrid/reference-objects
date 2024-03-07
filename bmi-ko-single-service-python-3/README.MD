@@ -1,4 +1,4 @@
-# BMI-KO-1.1.2-python
+# BMI-KO-SINGLE-SERVICE-PYTHON-3
 
 This KO is able to calculate BMI functions. 
 

@@ -1,4 +1,6 @@
 # BMI-KO-SEPERATE-KNOWLEDGE-PYTHON
+[!WARNING]  
+Experimental KO, does not currently work in activators. Multiple activator services of the smae type are not supported
 
 This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service within this object has its own seperate implementations of this knowledge.
 

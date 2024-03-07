@@ -6,4 +6,4 @@ This is the shared knowledge underlying the serices within this knowledge object
 - get_bmi_category: takes in a bmi and returns what health category this BMI would be classified under. The current output options are: "Underweight", "Normal Weight", "OverWeight", and "Obese"
 
 ### Testing
-Testing scripts can be run by using ```deno test test_knowledge.ts``` to verify the knowledge underlying deno services
+Testing scripts can be run by using ```deno test knowledge_test.ts``` to verify the knowledge underlying deno services

@@ -1,4 +1,6 @@
 # BMI-KO-COMBINED-KNOWLEDGE-PYTHON
+[!WARNING]  
+Experimental KO, does not currently work in activators
 
 This KO is able to calculate BMI functions. This knowledge object has multiple services which can be used to apply the same underlying knowledge. Each service within this object shares an implementation of this knowledge.
 

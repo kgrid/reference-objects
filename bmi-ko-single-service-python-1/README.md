@@ -1,4 +1,4 @@
-# BMI-KO-1.1.0-python
+# BMI-KO-Single-Service-Python-1
 
 This KO is able to calculate BMI functions. It contains service intended to be used in within the [KGrid python activator](https://github.com/kgrid/python-activator)
 

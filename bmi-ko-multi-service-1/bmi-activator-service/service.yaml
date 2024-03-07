@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /endpoints/bmi-ko-2.1.1
+  - url: /endpoints/bmi-ko-multi-service-1
     description: Calculate bmi
 tags:
   - name: KO Endpoints

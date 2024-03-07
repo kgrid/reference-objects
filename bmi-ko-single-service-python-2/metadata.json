@@ -16,7 +16,7 @@
       "@type": "@id"
     }
   }, 
-  "@id":"bmi-ko-1.1.1-python",
+  "@id":"bmi-ko-single-service-python-2",
   "koio:kgrid":"2",
   "@type" : "koio:KnowledgeObject",
   "dc:title" : "bmi calculator with a python activator service in a folder",
