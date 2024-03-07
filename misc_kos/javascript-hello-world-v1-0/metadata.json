@@ -1,0 +1,14 @@
+{
+  "@id" : "javascript/hello/world/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "title" : "Basic Knowledge Object",
+  "identifier" : "ark:javascript/hello/world/v1.0",
+  "version" : "v1.0",
+  "description" : "A sample knowledge object",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "World" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/default/src.py",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
