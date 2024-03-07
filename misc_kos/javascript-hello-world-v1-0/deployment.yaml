@@ -1,6 +1,0 @@
-/endpoint:
-  post:    
-    engine: 
-      name: org.kgrid.javascript-activator
-      artifact: ./src/src.js
-      function: func

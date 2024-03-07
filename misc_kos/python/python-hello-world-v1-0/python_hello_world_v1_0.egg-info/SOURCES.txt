@@ -1,9 +1,0 @@
-setup.py
-python_hello_world_v1_0.egg-info/PKG-INFO
-python_hello_world_v1_0.egg-info/SOURCES.txt
-python_hello_world_v1_0.egg-info/dependency_links.txt
-python_hello_world_v1_0.egg-info/top_level.txt
-src/__init__.py
-src/src.py
-tests/__init__.py
-tests/test_hello_world.py

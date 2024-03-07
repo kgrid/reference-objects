@@ -1,7 +1,0 @@
-/endpoint:
-  post:    
-    engine: 
-      name: org.kgrid.python-activator
-      package: python_hello_world_v1_0
-      module: src
-      function: func
