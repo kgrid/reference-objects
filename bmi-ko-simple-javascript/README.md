@@ -19,7 +19,7 @@ Input : POST
 ```
 ### Run Tests
 This module includes tests that verify both the underlying knowledge implementation and the activator service.
-```deno test test.ts```
+```deno test```
 
 ## Structure
 This KO contain only one service which has only one implementation. The implementation is placed in the root of the KO. This is the simplest KO structure. 

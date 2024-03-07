@@ -1,5 +1,5 @@
 import { assertThrows} from "https://deno.land/std@0.202.0/assert/mod.ts";
-import { bmi_category} from "./http_service";
+import { bmi_category} from "./http_service.ts";
 
 Deno.test("test bmi calculation", ()=>{
   const input ={
