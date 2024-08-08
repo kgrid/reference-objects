@@ -1,4 +1,4 @@
-[
+[  
   {
     "@context": "https://kgrid.org/koio/1.1/context",
     "@id": "BMICalculator",
@@ -8,13 +8,13 @@
     "dc:identifier": "ark:BMICalculator",
     "version": "v1.1",
     "dc:description": "calculates bmi value and category",
-    "koio:contributors": "Kgrid Team",
-    "koio:keywords": [
+    "contributors": "Kgrid Team",
+    "keywords": [
       "bmi",
       "category",
       "calculate"
     ],
-    "koio:hasService": [
+    "hasService": [
       {
         "@type": [
           "cli",
@@ -22,7 +22,7 @@
         ],
         "hasServiceSpecification": "cli/help.txt",
         "dependsOn": "bmiFunction",
-        "implementedBy": "cli"
+        "isImplementedBy": "cli"
       },
       {
         "@type": [
@@ -31,13 +31,13 @@
         ],
         "hasServiceSpecification": "batch_client/help.txt",
         "dependsOn": "bmiFunction",
-        "implementedBy": "batch_client"
+        "isImplementedBy": "batch_client"
       },
       {
         "@type": "API",
         "hasServiceSpecification": "API_service_js/service.yaml",
         "dependsOn": "bmiFunction",
-        "implementedBy": [
+        "isImplementedBy": [
           {
             "@id": "API_service_js",
             "@type": [
@@ -51,7 +51,7 @@
         "@type": "API",
         "hasServiceSpecification": "API_service_py/service.yaml",
         "dependsOn": "bmiFunction",
-        "implementedBy": [
+        "isImplementedBy": [
           {
             "@id": "API_service_py/implementation_a",
             "@type": [
@@ -65,7 +65,7 @@
         "@type": "API",
         "hasServiceSpecification": "web_app/service.yaml",
         "dependsOn": "bmiFunction",
-        "implementedBy": [
+        "isImplementedBy": [
           {
             "@id": "web_app",
             "@type": [
@@ -76,10 +76,10 @@
         ]
       }
     ],
-    "koio:hasKnowledge": {
+    "hasKnowledge": {
       "@id": "knowledge",
       "@type": "function",
-      "implementedBy": [
+      "isImplementedBy": [
         "bmi_knowledge.py",
         "bmi_calculator.ts"
       ]
