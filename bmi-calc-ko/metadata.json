@@ -7,26 +7,26 @@
     "dc:identifier" : "ark:BMICalculator",
     "version" : "v1.1",
     "dc:description" : "calculates bmi value and category",
-    "koio:contributors" : "Kgrid Team",
-    "koio:keywords" : [ "bmi", "category", "calculate" ],
-    "koio:hasService":[
+    "contributors" : "Kgrid Team",
+    "keywords" : [ "bmi", "category", "calculate" ],
+    "hasService":[
       {
         "@type":["cli","javascript"],
         "hasServiceSpecification":"cli/help.txt",
         "dependsOn":"bmiFunction",
-        "implementedBy" : "cli"
+        "isImplementedBy" : "cli"
       },
       {
         "@type":["batch","javascript"],
         "hasServiceSpecification":"batch_client/help.txt",
         "dependsOn":"bmiFunction",
-        "implementedBy" : "batch_client"
+        "isImplementedBy" : "batch_client"
       },
       {
         "@type":"API",
         "hasServiceSpecification":"API_service_js/service.yaml",
         "dependsOn":"bmiFunction",
-        "implementedBy" : [{
+        "isImplementedBy" : [{
           "@id": "API_service_js",
           "@type":[
               "https://kgrid.org/specs/activationSpec.html#object",
@@ -39,7 +39,7 @@
         "@type":"API",
         "hasServiceSpecification":"API_service_py/service.yaml",
         "dependsOn":"bmiFunction",
-        "implementedBy" : [{
+        "isImplementedBy" : [{
           "@id": "API_service_py/implementation_a",
           "@type": [
             "https://kgrid.org/specs/activationSpec.html#object",
@@ -52,7 +52,7 @@
         "@type":"API",
         "hasServiceSpecification":"web_app/service.yaml",
         "dependsOn":"bmiFunction",
-        "implementedBy" : [{
+        "isImplementedBy" : [{
           "@id": "web_app",
           "@type": [
             "https://kgrid.org/specs/activationSpec.html#object",
@@ -62,9 +62,9 @@
   
       }
     ],
-    "koio:hasKnowledge":{
+    "hasKnowledge":{
       "@id":"knowledge",
       "@type":"function",
-      "implementedBy" : ["bmi_knowledge.py","bmi_calculator.ts"]
+      "isImplementedBy" : ["bmi_knowledge.py","bmi_calculator.ts"]
     }
   }
