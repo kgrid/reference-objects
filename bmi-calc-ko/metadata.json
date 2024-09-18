@@ -1,70 +1,70 @@
 {
-  "@context": "https://kgrid.org/koio/1.1/context",   
+  "@context": "https://kgrid.org/koio/2.0/context",   
     "@id":"BMICalculator",
     "koio:kgrid":"2",
     "@type" : "koio:KnowledgeObject",
     "dc:title" : "bmi calculator",
     "dc:identifier" : "ark:BMICalculator",
-    "version" : "v1.1",
+    "version" : "v1.2",
     "dc:description" : "calculates bmi value and category",
     "koio:contributors" : "Kgrid Team",
     "koio:keywords" : [ "bmi", "category", "calculate" ],
     "koio:hasService":[
       {
-        "@type":["cli","javascript"],
+        "@type":["CLI","JavaScript"],
         "hasServiceSpecification":"cli/help.txt",
         "dependsOn":"bmiFunction",
         "implementedBy" : "cli"
       },
       {
-        "@type":["batch","javascript"],
+        "@type":["Batch","JavaScript"],
         "hasServiceSpecification":"batch_client/help.txt",
         "dependsOn":"bmiFunction",
         "implementedBy" : "batch_client"
       },
       {
-        "@type":"API",
+        "@type":["Service","API"],
         "hasServiceSpecification":"API_service_js/service.yaml",
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
           "@id": "API_service_js",
           "@type":[
               "https://kgrid.org/specs/activationSpec.html#object",
-              "javascript"            
+              "JavaScript"            
             ]
         }]
   
       },
       {
-        "@type":"API",
+        "@type":["Service","API"],
         "hasServiceSpecification":"API_service_py/service.yaml",
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
           "@id": "API_service_py/implementation_a",
           "@type": [
             "https://kgrid.org/specs/activationSpec.html#object",
-            "python"            
+            "Python"            
           ]
         }]
   
       },
       {
-        "@type":"API",
+        "@type":["Service","API"],
         "hasServiceSpecification":"web_app/service.yaml",
         "dependsOn":"bmiFunction",
         "implementedBy" : [{
           "@id": "web_app",
           "@type": [
-            "https://kgrid.org/specs/activationSpec.html#object",
-            "deno"            
+            "API",
+            "JavaScript"            
           ]
         }]
   
       }
     ],
     "koio:hasKnowledge":{
-      "@id":"knowledge",
-      "@type":"function",
+      "@id":"bmiFunction",
+      "@type":["Knowledge","Function"],
       "implementedBy" : ["bmi_knowledge.py","bmi_calculator.ts"]
     }
   }
