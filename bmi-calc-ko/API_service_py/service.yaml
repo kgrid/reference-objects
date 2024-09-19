@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  version: '1.0'
+  version: '1.2'
   title: 'bmi calculator'
   description: 'A knowledge object to calculate bmi and categories.'
   license:

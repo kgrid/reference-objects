@@ -1,9 +1,9 @@
 {
   "@context": "https://kgrid.org/koio/2.0/context",
-  "@id": "bmi-ko-single-service-python-2",
+  "@id": "bmi-ko-simple-python",
   "koio:kgrid": "2",
   "@type": "koio:KnowledgeObject",
-  "dc:title": "bmi calculator with a python activator service in a folder",
+  "dc:title": "bmi calculator with a python activator service in the ko directory",
   "dc:identifier": "ark:BMICalculatorSingleServSingleImp",
   "version": "v1.1",
   "dc:description": "calculates bmi value and category using multiple impl",
@@ -19,11 +19,11 @@
         "Service",
         "API"
       ],
-      "hasServiceSpecification": "python-activator/service.yaml",
+      "hasServiceSpecification": "service.yaml",
       "dependsOn": "bmiFunction",
       "implementedBy": [
         {
-          "@id": "python-activator",
+          "@id": ".",
           "@type": [
             "https://kgrid.org/specs/activationSpec.html#object",
             "Python"
@@ -34,7 +34,10 @@
   ],
   "koio:hasKnowledge": {
     "@id": "bmiFunction",
-    "@type": "function",
+    "@type": [
+      "Knowledge",
+      "Function"
+    ],
     "implementedBy": [
       "bmi_calculator.py"
     ]
